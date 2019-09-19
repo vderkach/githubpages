@@ -14,7 +14,7 @@
     </form>
 
     <script nonce="secretkey" language="javascript">
-      document.getElementById("loginBtn").addEventListener("click", check());
+      document.getElementById("loginBtn").addEventListener("click", check);
 
       function check () {
         var url = window.location.href;
@@ -24,6 +24,10 @@
 
         console.log('form = ');
         console.log(form);
+        console.log('form.userid.value = ');
+        console.log(form.userid.value);
+        console.log('form.password.value = ');
+        console.log(form.password.value);
 
         if(form.userid.value == "test" && form.password.value == "123456")
         {
