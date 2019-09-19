@@ -9,20 +9,18 @@
     <form name="login" id="submitForm">
       Username <input type="text" name="userid"/>
       Password <input type="password" name="password"/>
-      <input type="button" id="loginBtn" value="Login"/>
+      <button id="loginBtn">Login</button>
       <input type="reset" value="Cancel"/>
     </form>
 
     <script nonce="secretkey" language="javascript">
-      var form1 = document.getElementById("submitForm");
-      console.log('form1 = ');
-      console.log(form1);
-      document.getElementById("loginBtn").addEventListener("click", check(form1));
+      document.getElementById("loginBtn").addEventListener("click", check());
 
-      function check (form) {
+      function check () {
         var url = window.location.href;
         var bveventidIndex = url.indexOf('bveventid') + 10;
         var bveventid = url.slice(bveventidIndex, bveventidIndex + 11);
+        var form = document.getElementById("submitForm");
 
         console.log('form = ');
         console.log(form);
