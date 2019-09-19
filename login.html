@@ -14,16 +14,15 @@
     </form>
 
     <script nonce="secretkey" language="javascript">
-      document.getElementById("loginBtn").addEventListener("click", myFunction);
+      var form1 = document.getElementById("submitForm");
+      console.log('form1 = ');
+      console.log(form1);
+      document.getElementById("loginBtn").addEventListener("click", check(form1));
 
       function check (form) {
         var url = window.location.href;
         var bveventidIndex = url.indexOf('bveventid') + 10;
         var bveventid = url.slice(bveventidIndex, bveventidIndex + 11);
-
-        var form1 = document.getElementById("submitForm");
-        console.log('form1 = ');
-        console.log(form1);
 
         console.log('form = ');
         console.log(form);
