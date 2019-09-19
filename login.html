@@ -22,16 +22,9 @@
         var bveventid = url.slice(bveventidIndex, bveventidIndex + 11);
         var form = document.getElementById("submitForm");
 
-        event.preventDefault()
+        event.preventDefault();
 
-        console.log('form = ');
-        console.log(form);
-        console.log('form.userid.value = ');
-        console.log(form.userid.value);
-        console.log('form.password.value = ');
-        console.log(form.password.value);
-
-        if(form.userid.value == "test" && form.password.value == "123456")
+        if(form.userid.value == "test" && form.password.value == "1111")
         {
           window.location.href = "https://vderkach.github.io/githubpages/container.html?bveventid=" + bveventid +"&bvuserToken=b7f50e76ca0c2521c44ac4616aad1a72646174653d3230313930393039267573657269643d766465726b266d61786167653d393026"
         }
