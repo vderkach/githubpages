@@ -6,23 +6,27 @@
   </head>
   <body>
     <h1>Simple Login Page</h1>
-    <form name="login">
+    <form name="login" id="submitForm">
       Username <input type="text" name="userid"/>
       Password <input type="password" name="password"/>
-      <input type="button" onclick="check(this.form)" value="Login"/>
+      <input type="button" id="loginBtn" value="Login"/>
       <input type="reset" value="Cancel"/>
     </form>
 
     <script nonce="secretkey" language="javascript">
+      document.getElementById("loginBtn").addEventListener("click", myFunction);
+
       function check (form) {
         var url = window.location.href;
         var bveventidIndex = url.indexOf('bveventid') + 10;
-        console.log('bveventidIndex = ');
-        console.log(bveventidIndex);
         var bveventid = url.slice(bveventidIndex, bveventidIndex + 11);
 
-        console.log('bveventid = ');
-        console.log(bveventid);
+        var form1 = document.getElementById("submitForm");
+        console.log('form1 = ');
+        console.log(form1);
+
+        console.log('form = ');
+        console.log(form);
 
         if(form.userid.value == "test" && form.password.value == "123456")
         {
@@ -30,7 +34,7 @@
         }
         else
         {
-          alert("Error Password or Username");
+          alert("Error");
         }
       }
     </script>
