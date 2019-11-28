@@ -4,13 +4,9 @@
     <title>Test Page</title>
 
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta http-equiv="Content-Security-Policy" content="script-src 'strict-dynamic' 'nonce-secretkey' 'unsafe-inline' *.bazaarvoice.com uk.cdn-net.com six.cdn-net.com mpsnare.iesnare.com; object-src 'none'; base-uri 'self'">
 
-    <script type="text/javascript" nonce="secretkey" src="https://display.ugc.bazaarvoice.com/static/Agileville/testZone/en_US/bvapi.js"></script>
-    <script nonce="secretkey" type="text/javascript">
-      $BV.configure('global', { productId : 'product111' });
-    </script>
+    <script async src="https://apps.bazaarvoice.com/deployments/Agileville/vderkachTestSite/production/en_US/bv.js"></script>
+
   </head>
   <body>
     <header role="banner">
@@ -23,27 +19,19 @@
     </nav>
 
     <main role="main">
-      <div id="BVRRSummaryContainer"></div>
+      <div data-bv-show="rating_summary" data-bv-product-id="product1"></div>
 
-    <div id="BVRRContainer"></div>
-    <script nonce="secretkey" type="text/javascript">
-      $BV.ui( 'rr', 'show_reviews', {
-        doShowContent : function () {
-           // If the container is hidden (such as behind a tab), put code here to make it visible 
-           //(open the tab).
-        }
-      });
-    </script>
+      <div data-bv-show="reviews" data-bv-product-id="product1"></div>
 
-    <div id="BVQAContainer"></div>
-    <script nonce="secretkey" type="text/javascript">
-      $BV.ui( 'qa', 'show_questions', {
-        doShowContent : function () {
-           // If the container is hidden (such as behind a tab), put code here to make it visible 
-           //(open the tab).
-        }
-      });
-    </script>
+      <div data-bv-show="questions" data-bv-product-id="product1"></div>
+
+      <div data-bv-show="review_highlights" data-bv-product-id="product1"></div>
+
+      <div class="inlineRatings">
+        <div data-bv-show="inline_rating" data-bv-product-id="product1"></div>
+        <div data-bv-show="inline_rating" data-bv-product-id="product2"></div>
+      </div>
+
     </main>
     
     <footer role="contentinfo">
