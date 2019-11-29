@@ -25,12 +25,23 @@
       <div data-bv-show="questions" data-bv-product-id="product1"></div>
 
       <h2 style="margin-top: 30px;">SWAT REVIEW HIGHLIGHTS</h2>
-      <div data-bv-show="review_highlights" data-bv-product-id="product1"></div>
+      <div data-bv-show="review_highlights" data-bv-product-id="product1">Product1</div>
 
       <h2 style="margin-top: 30px;">SWAT INLINE RATINGS</h2>
       <div class="inlineRatings">
-        <div data-bv-show="inline_rating" data-bv-product-id="product1"></div>
-        <div data-bv-show="inline_rating" data-bv-product-id="product2"></div>
+        
+        <div class='inline-rating-block'>
+          <div>Product1</div>
+          <div data-bv-show="inline_rating" data-bv-product-id="product1"></div>
+        </div>
+        <div class='inline-rating-block'>
+          <div>Product2</div>
+          <div data-bv-show="inline_rating" data-bv-product-id="product2">Product2</div>
+        </div>
+        <div class='inline-rating-block'>
+          <div>Product3</div>
+          <div data-bv-show="inline_rating" data-bv-product-id="product3">Product3</div>
+        </div>
       </div>
 
     </main>
