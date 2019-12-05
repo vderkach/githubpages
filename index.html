@@ -11,7 +11,10 @@
       {
         "@context": "http://schema.org/",
         "@type": "Product",
-        "name": "FH-PS-307234000"
+        "name": "Name for product1",
+        "color": "red",
+        "productID": "product1",
+        "@id": "/products/product1"
       }
     </script>
     <!--<script async src="https://apps.bazaarvoice.com/deployments/trend-microanz/main_site/staging/en_NZ/bv.js"></script>-->
@@ -30,11 +33,21 @@
       <h2 style="margin-top: 70px;">SWAT CALL REVIEWS</h2>
       <div data-bv-show="reviews" data-bv-product-id="product1"></div>
 
+      <script type="application/ld+json">
+      {
+        "@context": "http://schema.org/",
+        "@type": "AggregateRating",
+        "@id": "/products/product1",
+        "ratingValue": "3.5",
+        "reviewCount": "11"
+      }
+    </script>
+
       <h2 style="margin-top: 70px;">SWAT CALL QUESTIONS</h2>
       <div data-bv-show="questions" data-bv-product-id="product1"></div>
 
       <h2 style="margin-top: 70px;">SWAT REVIEW HIGHLIGHTS</h2>
-      <div data-bv-show="review_highlights" data-bv-product-id="FH-PS-307234000">Product1</div>
+      <div data-bv-show="review_highlights" data-bv-product-id="product1">Product1</div>
 
       <h2 style="margin-top: 70px;">SWAT INLINE RATINGS</h2>
       <div class="inlineRatings">
