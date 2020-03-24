@@ -5,7 +5,7 @@
 
     <meta charset="utf-8">
 
-    <script async src="https://apps-qa.bazaarvoice.com/deployments/bv-loader-qa/jsonld_vderk_testing/production/en_US/bv.js"></script>
+    <script async src="https://apps-qa.bazaarvoice.com/deployments/review-highlights-default/main_site/production/en_US/bv.js"></script>
 
   </head>
   <body>
@@ -17,6 +17,8 @@
       <h2>SWAT RATING SUMMARY</h2>
       <div data-bv-show="rating_summary" data-bv-product-id="Product1"></div>
 
+      <h2 style="margin-top: 70px;">REVIEW HIGHLIGHTS</h2>
+      <div data-bv-show="review_highlights" data-bv-product-id="Product1"></div>
 
       <h2 style="margin-top: 70px;">SWAT CALL REVIEWS</h2>
       <div data-bv-show="reviews" data-bv-product-id="Product1"></div>
@@ -34,7 +36,7 @@
         "sku": "SKU_PRODUCT1",
         "mpn": "MPN_PRODUCT1",
         "productID": "product1",
-        "@id": "product1"
+        "@id": window.location.href
       }
     </script>
 
