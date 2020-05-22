@@ -7,6 +7,10 @@
 
     <script type="text/javascript" src="https://display.ugc.bazaarvoice.com/static/Agileville/main_site/en_US/bvapi.js"></script>
 
+    <script type="text/javascript"> 
+      $BV.configure('global', { productId : 'product1' });
+    </script>
+
     <!-- PRODUCT -->
       <script type="application/ld+json">
       {
@@ -62,13 +66,9 @@
 
     <main role="main">
       <h2>SWAT RATING SUMMARY</h2>
-      <div data-bv-show="rating_summary" data-bv-product-id="product1"></div>
+      <div id="BVRRSummaryContainer"></div>
 
-      <h2>SWAT RH</h2>
-      <div data-bv-show="review_highlights" data-bv-product-id="product1"></div>
-
-      <h2>SWAT Reviews</h2>
-      <div data-bv-show="reviews" data-bv-product-id="product1"></div>
+      <div id="BVRRContainer"></div>
 
 
     </main>
