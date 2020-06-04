@@ -28,6 +28,14 @@
         var head = document.querySelector('head');
         script.type = 'application/ld+json';
 
+        const canonicalLink = window.document.head.querySelector(
+          'link[rel="canonical"]'
+        );
+        const jsonldId = canonicalLink
+          ? canonicalLink.getAttribute('href')
+          : window.location.href;
+
+
         const schema = {
           "@context": "http://schema.org/",
           "@type": "Product",
@@ -39,7 +47,7 @@
           "sku": "SKU_PRODUCT1",
           "mpn": "MPN_PRODUCT1",
           "productID": "product1",
-          "@id": window.location.href
+          "@id": jsonldId
         };
 
         script.text = JSON.stringify(schema, null, 2);
