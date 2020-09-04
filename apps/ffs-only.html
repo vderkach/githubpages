@@ -6,17 +6,6 @@
     <meta charset="utf-8">
 
     <script async src="https://apps-qa.bazaarvoice.com/deployments/bv-loader-qa/jsonld_vderk_testing_ffs/production/en_US/bv.js"></script>
-    <script type="text/javascript">
-      function submitGeneric (event) {
-        var elem = document.createElement('div');
-        elem.setAttribute('data-bv-show', 'product_picker');
-        // Set any other options you would like.
-        elem.setAttribute('data-bv-category-id', 'sampleCategory');
-        // Inject the element into the page.
-        document.getElementById('grs_container').appendChild(elem);
-      }
-      document.getElementById('grs').addEventListener('click', submitGeneric);
-    </script>
 
   </head>
   <body>
@@ -29,6 +18,18 @@
       <div data-bv-show="rating_summary" data-bv-product-id="product1"></div>
 
       <button id="grs">Write a review</button>
+
+       <script type="text/javascript">
+      function submitGeneric (event) {
+        var elem = document.createElement('div');
+        elem.setAttribute('data-bv-show', 'product_picker');
+        // Set any other options you would like.
+        elem.setAttribute('data-bv-category-id', 'sampleCategory');
+        // Inject the element into the page.
+        document.getElementById('grs_container').appendChild(elem);
+      }
+      document.getElementById('grs').addEventListener('click', submitGeneric);
+    </script>
 
 
     </main>
