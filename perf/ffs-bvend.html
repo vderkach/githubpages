@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Test Page FFS only</title>
+
+    <meta charset="utf-8">
+
+    <!-- PRODUCT -->
+      <script type="application/ld+json">
+      {
+			  "@context": "http://schema.org/",
+			  "@type": "Product",
+			  "name": "Name for product1",
+			  "color": "red",
+			  "brand": "brand1",
+			  "description": "product description",
+			  "image": "https://www.pathimage/1.jpg",
+			  "sku": "SKU_PRODUCT1",
+			  "mpn": "MPN_PRODUCT1",
+			  "productID": "product1",
+			  "@id": "https://vderkach.github.io/githubpages/apps/ffs-only.html"
+			}
+    </script>
+
+    <!--REVIEWS-->
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org/",
+        "id": "https://vderkach.github.io/githubpages/apps/ffs-only.html",
+        "review": [
+          {
+            "@type": "Review",
+            "itemReviewed": "product1",
+            "reviewBody": "text text text text text text text text text text text text ",
+            "author": "author1",
+            "reviewRating": {
+              "@type" : "Rating",
+              "ratingValue": "3.4"
+            }
+          },
+          {
+            "@type": "Review",
+            "itemReviewed": "product1",
+            "reviewBody": "text 2 text text text text text text text text text text text ",
+            "author": "author2",
+            "reviewRating": {
+              "@type" : "Rating",
+              "ratingValue": "5.0"
+            }
+          }
+        ]
+      }
+      </script>
+
+  </head>
+  <body>
+    <header role="banner" style="text-align: center;">
+       TEST PAGE
+    </header>
+
+    <main role="main">
+      <h2>SWAT RATING SUMMARY</h2>
+      <div data-bv-show="rating_summary" data-bv-product-id="product1"></div>
+
+
+    </main>
+    
+    <footer role="contentinfo">
+      <p></p>
+    </footer>
+
+    <script async src="https://apps.bazaarvoice.com/deployments/Agileville/main_site/production/en_US/bv.js"></script>
+  </body>
+</html>
